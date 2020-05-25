@@ -4,7 +4,7 @@ class HomeController extends BaseController
 {
 	public function index()
 	{
-		if(false){
+		if(session()->id != null){
 			return view('members/presence');
 		}else{
 			return redirect()->to('/login');

@@ -6,7 +6,7 @@
             <div class="card-body">
               <div class="card col-md-12">
                 <div class="card-body">
-                  <form method="POST" action="">
+                  <form method="POST" action="/login/process">
                     <div class="form-group row">
                       <label for="nim" class="col-md-12 col-form-label text-md-left">NIM</label>
                       <div class="col-md-12">

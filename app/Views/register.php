@@ -6,7 +6,7 @@
         <div class="card-body">
           <div class="card col-md-12">
             <div class="card-body">
-              <form method="POST" action="">
+              <form method="POST" action="/register/process">
                 <div class="form-group row">
                   <label for="email" class="col-md-12 col-form-label text-md-left">Email</label>
                   <div class="col-md-12">
@@ -67,7 +67,7 @@
                 <div class="form-group row">
                   <label for="repassword" class="col-md-12 col-form-label text-md-left">Re - Password</label>
                   <div class="col-md-12">
-                    <input id="repassword" type="password" class="form-control " name="repassword" required autocomplete="">
+                    <input id="repassword" type="password" class="form-control " name="reconfirm" required autocomplete="">
                   </div>
                 </div>
                 <div class="form-group row mt-4">
