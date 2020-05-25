@@ -30,7 +30,8 @@ class AuthController extends BaseController
 		$data = [
 			"name" => $user["name"],
 			"nim" => $user["nim"],
-			'id' => $user["id"]
+			'id' => $user["id"],
+			'role' => $user["role"]
 		];
 		session()->set($data);
 		return redirect()->to('/');
