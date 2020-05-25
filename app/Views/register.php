@@ -10,7 +10,7 @@
                 <div class="form-group row">
                   <label for="email" class="col-md-12 col-form-label text-md-left">Email</label>
                   <div class="col-md-12">
-                    <input id="email" type="text" class="form-control " name="email" value="" required autocomplete="email">
+                    <input id="email" type="email" class="form-control " name="email" value="" required autocomplete="email">
                   </div>
                 </div>
                 <div class="form-group row">
@@ -28,7 +28,7 @@
                 <div class="form-group row">
                   <label for="name" class="col-md-12 col-form-label text-md-left">Jurusan</label>
                   <div class="col-md-12">
-                    <select class="form-control" name="major">
+                    <select class="form-control" name="major" required>
                       <option value="S1 Sistem Informasi">S1 Sistem Informasi</option>
                       <option value="S1 Teknik Industri">S1 Teknik Industri</option>
                       <option value="S1 Teknik Logistik">S1 Teknik Logistik</option>
@@ -39,7 +39,7 @@
                 <div class="form-group row">
                   <label for="name" class="col-md-12 col-form-label text-md-left">Startup</label>
                   <div class="col-md-12">
-                    <select class="form-control" name="practical_work" id="practical_work">
+                    <select class="form-control" name="practical_work" id="practical_work" required>
                       <option value="">Pilih Tempat KP</option>
                       <?php foreach ($practicalworks as $practicalwork) : ?>
                         <option value="<?= $practicalwork['id'] ?>"><?= $practicalwork['name'] ?></option>
@@ -50,7 +50,7 @@
                 <div class="form-group row">
                   <label for="name" class="col-md-12 col-form-label text-md-left">Divisi</label>
                   <div class="col-md-12">
-                    <select class="form-control" name="division" id="division">
+                    <select class="form-control" name="division" id="division" required>
                       <option value="">Pilih Divisi KP</option>
                       <?php foreach ($divisions as $division) : ?>
                         <option data-practical="<?= $division['practical_work_id'] ?>" value="<?= $division['id'] ?>"><?= $division['name'] ?></option>
@@ -67,7 +67,7 @@
                 <div class="form-group row">
                   <label for="repassword" class="col-md-12 col-form-label text-md-left">Re - Password</label>
                   <div class="col-md-12">
-                    <input id="repassword" type="password" class="form-control " name="repassword" required autocomplete="current-password">
+                    <input id="repassword" type="password" class="form-control " name="repassword" required autocomplete="">
                   </div>
                 </div>
                 <div class="form-group row mt-4">

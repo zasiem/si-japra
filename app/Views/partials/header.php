@@ -30,4 +30,11 @@
         <p>Gambungstore and Travedia ' s presence app for practical work</p>
         <hr>
       </div>
+      <div class="col-sm-8 text-center">
+        <?php if (session()->getFlashdata('success')): ?>
+          <div class="alert alert-success" role="alert">
+            <?php echo session()->getFlashdata('success'); ?>
+          </div>
+        <?php endif; ?>
+      </div>
     </div>
