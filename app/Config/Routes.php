@@ -37,6 +37,7 @@ $routes->get('/login', 'AuthController::login');
 $routes->post('/login/process', 'AuthController::login_process');
 $routes->get('/register', 'AuthController::register');
 $routes->post('/register/process', 'AuthController::register_process');
+$routes->get('/logout', 'AuthController::logout');
 
 // presence
 $routes->get('/presence', 'PresenceController::index');

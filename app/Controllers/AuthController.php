@@ -9,6 +9,9 @@ class AuthController extends BaseController
 
 	public function login()
 	{
+			if (session()->id != null) {
+				return redirect()->to('/');
+			}
 			return view('login');
 	}
 
@@ -67,6 +70,14 @@ class AuthController extends BaseController
 		}
 		session()->setFlashdata('success', 'Berhasil Mendaftar!');
 		return redirect()->to("/login");
+	}
+
+	//--------------------------------------------------------------------
+
+	public function logout()
+	{
+		session()->destroy();
+		return redirect()->to('/login');
 	}
 
 }
