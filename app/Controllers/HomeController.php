@@ -5,7 +5,7 @@ class HomeController extends BaseController
 	public function index()
 	{
 		if(session()->role == "member"){
-			return view('members/home');
+			return redirect()->to('/presence');
 		}elseif(session()->role == "admin"){
 			return view('admins/dashboard');
 		}else{

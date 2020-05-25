@@ -1,5 +1,8 @@
 <?php echo view('partials/header.php') ?>
 <div class="row justify-content-center">
+  <h5>Jam Server</h5>
+</div>
+<div class="row justify-content-center">
   <p>
     Hai
     <div class="dropdown px-2">
@@ -7,7 +10,7 @@
         <?= session()->name ?>
       </span>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Logout</a>
+        <a class="dropdown-item" href="/logout">Logout</a>
       </div>
     </div>
     , sudah absen hari ini ?
