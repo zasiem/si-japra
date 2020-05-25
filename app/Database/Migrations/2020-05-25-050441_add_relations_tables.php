@@ -11,7 +11,7 @@ class AddRelationsTables extends Migration
 
 		$this->db->query('ALTER TABLE `divisions` ADD CONSTRAINT FK_divisions_practical_work_id FOREIGN KEY(`practical_work_id`) REFERENCES `practical_works`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;');
 
-		$this->db->query('ALTER TABLE `precenses` ADD CONSTRAINT FK_precenses_nim FOREIGN KEY(`nim`) REFERENCES `users`(`nim`) ON DELETE CASCADE ON UPDATE CASCADE;');
+		$this->db->query('ALTER TABLE `presences` ADD CONSTRAINT FK_presences_nim FOREIGN KEY(`nim`) REFERENCES `users`(`nim`) ON DELETE CASCADE ON UPDATE CASCADE;');
 	}
 
 	//--------------------------------------------------------------------
@@ -23,6 +23,6 @@ class AddRelationsTables extends Migration
 
 		$this->db->query('ALTER TABLE `divisions` DROP FOREIGN KEY FK_divisions_practical_work_id;');
 
-		$this->db->query('ALTER TABLE `precenses` DROP FOREIGN KEY FK_precenses_nim;');
+		$this->db->query('ALTER TABLE `presences` DROP FOREIGN KEY FK_presences_nim;');
 	}
 }

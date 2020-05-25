@@ -39,13 +39,13 @@ class CreatePrecensesTables extends Migration
 			]
 		]);
 		$this->forge->addKey('id', TRUE);
-    $this->forge->createTable('precenses');
+    $this->forge->createTable('presences');
 	}
 
 	//--------------------------------------------------------------------
 
 	public function down()
 	{
-		$this->forge->dropTable('precenses');
+		$this->forge->dropTable('presences');
 	}
 }
