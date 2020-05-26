@@ -13,15 +13,15 @@
         </tr>
       </thead>
       <tbody>
-        <?php foreach($presences as $presence) : ?>
+        <?php foreach($presences as $index => $presence) : ?>
           <tr>
-            <td><?= $presence['created_at'] ?></td>
-            <td><?= $presence['created_at'] ?></td>
-            <td><?= $presence['created_at'] ?></td>
-            <td><?= $presence['dones'] ?></td>
-            <td><?= $presence['goals'] ?></td>
-            <td><?= $presence['resistances'] ?></td>
-            <td><?= $presence['evidences'] ?></td>
+            <td><?= $index+1 ?></td>
+            <td><?= date("d-m-Y",strtotime($presence['created_at'])); ?></td>
+            <td><?= date("H:s",strtotime($presence['created_at'])); ?></td>
+            <td><?= nl2br($presence['dones']) ?></td>
+            <td><?= nl2br($presence['goals']) ?></td>
+            <td><?= nl2br($presence['resistances']) ?></td>
+            <td><?= nl2br($presence['evidences']) ?></td>
           </tr>
         <?php endforeach ?>
       </tbody>

@@ -1,6 +1,6 @@
 <?php echo view('partials/header.php') ?>
-<div class="row justify-content-center">
-  <h5>Jam Server</h5>
+<div class="row justify-content-center" onload="startTime()" id="timeServer">
+  <h5></h5>
 </div>
 <div class="row justify-content-center">
   <p>
@@ -45,15 +45,24 @@
 <?php echo view('partials/footer.php') ?>
 <script type="text/javascript">
 $(document).ready(function(){
+
   $('#presence').on('click', function(){
     $('#collapseHistory').removeClass('show');
     $('#presence hr').addClass('bg-warning');
     $('#history hr').removeClass('bg-warning');
   });
+
   $('#history').on('click', function(){
     $('#collapsePresence').removeClass('show');
     $('#presence hr').removeClass('bg-warning');
     $('#history hr').addClass('bg-warning');
   });
+
+  var timer = setInterval(clock, 1)
+  function clock(){
+    var today = new Date();
+    $("#timeServer h5").html(today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear()+" ― "+today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds());
+  }
+
 });
 </script>
