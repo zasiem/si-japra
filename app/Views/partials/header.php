@@ -11,7 +11,7 @@
   <!-- datatable -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
 
-  <title>Welcome</title>
+  <title>SI-JAPRA | Presensi Kerja Praktek</title>
 </head>
 <body class="bg-light text-dark">
   <div class="container p-5">

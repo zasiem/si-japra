@@ -18,7 +18,7 @@
           <tr>
             <td><?= $index+1 ?></td>
             <td><?= date("d-m-Y",strtotime($presence['created_at'])); ?></td>
-            <td><?= date("H:s",strtotime($presence['created_at'])); ?></td>
+            <td><?= date("H:i:s",strtotime($presence['created_at'])); ?></td>
             <td><?= nl2br($presence['dones']) ?></td>
             <td><?= nl2br($presence['goals']) ?></td>
             <td><?= nl2br($presence['resistances']) ?></td>
