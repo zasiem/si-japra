@@ -16,7 +16,21 @@ class PresenceController extends BaseController
 
 	public function presence()
 	{
-		
+
+		$data = [
+			"nim" => session()->get('nim'),
+			"goals" => $this->request->getPost("goals"),
+			"dones" => $this->request->getPost("dones"),
+			"evidences" => $this->request->getPost("evidences"),
+			"resistances" => $this->request->getPost("resistances"),
+		];
+		$Presence = new Presence();
+		if (!$Presence->save($data)) {
+			return view('members/home', ['errors' => $Presence->errors()]);
+		}
+		session()->setFlashdata('success', 'Berhasil Menginput Kehadiran!');
+		return redirect()->to("/presence");
+
 	}
 
 	//--------------------------------------------------------------------

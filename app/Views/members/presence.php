@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-sm-12">
-    <form method="POST" action="/register/process">
+    <form method="POST" action="/presence/input">
       <div class="form-group row">
         <label for="nim" class="col-md-12 col-form-label text-md-left">NIM</label>
         <div class="col-md-12">
