@@ -8,6 +8,9 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
+  <!-- datatable -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+
   <title>Welcome</title>
 </head>
 <body class="bg-light text-dark">
@@ -34,6 +37,13 @@
         <?php if (session()->getFlashdata('success')): ?>
           <div class="alert alert-success" role="alert">
             <?php echo session()->getFlashdata('success'); ?>
+          </div>
+        <?php endif; ?>
+        <?php if (session()->getFlashdata('errors')): ?>
+          <div class="alert alert-danger" role="alert">
+            <?php foreach (session()->getFlashdata('errors') as $field => $error) : ?>
+              <p><?= $error ?></p>
+            <?php endforeach ?>
           </div>
         <?php endif; ?>
         <?php if (! empty($errors)) : ?>

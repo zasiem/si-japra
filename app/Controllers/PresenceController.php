@@ -10,7 +10,8 @@ class PresenceController extends BaseController
 		$nim = session()->get('nim');
 
 		$Presence = new Presence();
-		return view('members/home');
+		$data['presences'] = $Presence->getPresences(session()->get('nim'));
+		return view('members/home', $data);
 
 	}
 
@@ -26,11 +27,11 @@ class PresenceController extends BaseController
 		];
 		$Presence = new Presence();
 		if (!$Presence->save($data)) {
-			return view('members/home', ['errors' => $Presence->errors()]);
+			session()->setFlashdata('errors', $Presence->errors());
+			return redirect()->to("/presence");
 		}
 		session()->setFlashdata('success', 'Berhasil Menginput Kehadiran!');
 		return redirect()->to("/presence");
-
 	}
 
 	//--------------------------------------------------------------------

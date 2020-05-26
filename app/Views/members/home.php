@@ -38,22 +38,22 @@
   </div>
   <div class="collapse" id="collapseHistory">
     <div class="card card-body">
-      Anims pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      <?php echo view("members/history"); ?>
     </div>
   </div>
 </div>
 <?php echo view('partials/footer.php') ?>
 <script type="text/javascript">
-  $(document).ready(function(){
-    $('#presence').on('click', function(){
-      $('#collapseHistory').removeClass('show');
-      $('#presence hr').addClass('bg-warning');
-      $('#history hr').removeClass('bg-warning');
-    });
-    $('#history').on('click', function(){
-      $('#collapsePresence').removeClass('show');
-      $('#presence hr').removeClass('bg-warning');
-      $('#history hr').addClass('bg-warning');
-    });
+$(document).ready(function(){
+  $('#presence').on('click', function(){
+    $('#collapseHistory').removeClass('show');
+    $('#presence hr').addClass('bg-warning');
+    $('#history hr').removeClass('bg-warning');
   });
+  $('#history').on('click', function(){
+    $('#collapsePresence').removeClass('show');
+    $('#presence hr').removeClass('bg-warning');
+    $('#history hr').addClass('bg-warning');
+  });
+});
 </script>

@@ -25,4 +25,10 @@ class Presence extends Model
     "evidences" => "required",
   ];
 
+  public function getPresences($nim)
+  {
+		$presences = $this->where('nim', $nim)->findAll();
+    return $presences;
+  }
+
 }

@@ -27,7 +27,8 @@ class AuthController extends BaseController
 		}
 
 		if ($user['password'] != $password) {
-			return view('login', ['errors' => ['password' => 'Password salah']]);
+			session()->setFlashdata('errors', ['password' => 'Password salah']);
+			return redirect()->to('/login');
 		}
 
 		$data = [
@@ -66,7 +67,8 @@ class AuthController extends BaseController
 			"division_id" => $this->request->getPost("division")
 		];
 		if (!$User->save($data)) {
-			return view('login', ['errors' => $User->errors()]);
+			session()->setFlashdata('errors', $User->errors());
+			return redirect()->to('/register');
 		}
 		session()->setFlashdata('success', 'Berhasil Mendaftar!');
 		return redirect()->to("/login");
