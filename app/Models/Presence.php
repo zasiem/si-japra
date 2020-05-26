@@ -15,6 +15,7 @@ class Presence extends Model
     "resistances",
     "evidences",
     "created_at",
+    "is_late",
   ];
 
   protected $validationRules    = [

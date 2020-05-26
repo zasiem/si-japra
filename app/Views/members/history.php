@@ -10,6 +10,7 @@
           <th>Target</th>
           <th>Halangan</th>
           <th>Evidence</th>
+          <th>Status</th>
         </tr>
       </thead>
       <tbody>
@@ -22,6 +23,7 @@
             <td><?= nl2br($presence['goals']) ?></td>
             <td><?= nl2br($presence['resistances']) ?></td>
             <td><?= nl2br($presence['evidences']) ?></td>
+            <td class="font-weight-bold"><?= $presence['is_late'] == 1 ? "Terlambat" : "Tepat Waktu" ?></td>
           </tr>
         <?php endforeach ?>
       </tbody>
