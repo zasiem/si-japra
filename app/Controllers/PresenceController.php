@@ -13,6 +13,7 @@ class PresenceController extends BaseController
 
 		$Presence = new Presence();
 		$data['presences'] = $Presence->getPresences(session()->get('nim'));
+		$data['time'] = Time::now('Asia/Jakarta');
 		return view('members/home', $data);
 
 	}
@@ -21,12 +22,12 @@ class PresenceController extends BaseController
 	{
 		$time1 = Time::parse('08:00:00');
 		$time2 = Time::parse('10:00:00');
-		$now = Time::now();
+		$now = Time::now('Asia/Jakarta');
 		$isTelat = 1;
 		if ($now->isBefore($time2) AND $now->isAfter($time1)) {
 			$isTelat = 0;
 		}
-		
+
 		$data = [
 			"nim" => session()->get('nim'),
 			"goals" => $this->request->getPost("goals"),
