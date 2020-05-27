@@ -60,8 +60,8 @@ $(document).ready(function(){
 
   var timer = setInterval(clock, 1)
   function clock(){
-    var today = new Date();
-    $("#timeServer h5").html(today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear()+" ― "+today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds());
+    var today = new Date().toLocaleString("en-US", {timeZone: "Asia/Jakarta"});
+    $("#timeServer h5").html(today);
   }
 
 });
