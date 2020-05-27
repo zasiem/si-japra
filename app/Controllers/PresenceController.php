@@ -23,6 +23,7 @@ class PresenceController extends BaseController
 		$time1 = Time::parse('08:00:00');
 		$time2 = Time::parse('10:00:00');
 		$now = Time::now('Asia/Jakarta');
+		return dd($now);
 		$isTelat = 1;
 		if ($now->isBefore($time2) AND $now->isAfter($time1)) {
 			$isTelat = 0;
