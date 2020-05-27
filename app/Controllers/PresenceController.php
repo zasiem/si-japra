@@ -36,6 +36,7 @@ class PresenceController extends BaseController
 			"evidences" => $this->request->getPost("evidences"),
 			"resistances" => $this->request->getPost("resistances"),
 			"is_late" => $isTelat,
+			"created_at" => $now,
 		];
 		$Presence = new Presence();
 		if (!$Presence->save($data)) {
