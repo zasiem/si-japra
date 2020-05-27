@@ -6,10 +6,14 @@ use App\Models\Presence;
 
 class PresenceController extends BaseController
 {
+
 	public function index()
 	{
 
 		$nim = session()->get('nim');
+		if ($nim == null) {
+			return redirect()->to('/');
+		}
 
 		$Presence = new Presence();
 		$data['presences'] = $Presence->getPresences(session()->get('nim'));
