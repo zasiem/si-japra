@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-sm-12">
+  <div class="col-sm-12"style="overflow:auto;">
     <table id="datatable" class="table table-bordered" style="width:100%">
       <thead>
         <tr>
