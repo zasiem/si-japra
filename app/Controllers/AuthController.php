@@ -26,7 +26,7 @@ class AuthController extends BaseController
 			return view('login', ['errors' => ['NIM' => 'NIM tidak ditemukan']]);
 		}
 
-		if ($user['password'] != $password) {
+		if ($user['password'] != md5($password)) {
 			session()->setFlashdata('errors', ['password' => 'Password salah']);
 			return redirect()->to('/login');
 		}
@@ -55,12 +55,17 @@ class AuthController extends BaseController
 
 	public function register_process()
 	{
+
+		if ($this->request->getPost("password") != $this->request->getPost("reconfirm")) {
+			session()->setFlashdata('errors', ['password' => 'password tidak sesuai dengan re-password']);
+			return redirect()->to('/register');
+		}
+
 		$User = new User();
 		$data = [
 			"email" => $this->request->getPost("email"),
 			"nim" => $this->request->getPost("nim"),
-			"password" => $this->request->getPost("password"),
-			"reconfirm" => $this->request->getPost("reconfirm"),
+			"password" => md5($this->request->getPost("password")),
 			"name" => $this->request->getPost("name"),
 			"major" => $this->request->getPost("major"),
 			"practical_work_id" => $this->request->getPost("practical_work"),

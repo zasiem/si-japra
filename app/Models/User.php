@@ -21,7 +21,6 @@ class User extends Model
     "email" => 'required|is_unique[users.email]',
     "nim" => 'required|numeric|is_unique[users.nim]',
     'password'  => 'required',
-    'reconfirm' => 'required|matches[password]',
     "name" => 'required',
     "major" => 'required',
     "practical_work_id" => 'required',
