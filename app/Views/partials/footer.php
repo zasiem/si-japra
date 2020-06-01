@@ -1,4 +1,4 @@
-
+  <p class="text-center" style="color:transparent;">Dibuat oleh programmer yang bercita-cita menjadi selebgram kondang - <a href="https://instagram.com/erzaputra_" style="color:transparent;" target="_blank">ERZ</a></p>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

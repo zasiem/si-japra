@@ -17,20 +17,33 @@
   <div class="container p-5">
     <div class="my-5 row justify-content-center">
       <div class="col-sm-3 text-center">
-        <img src="<?php echo base_url('assets/images/gambungstore.png') ?>" alt="gambungstore" height="100px">
+        <a href="https://gambungstore.id" target="_blank">
+          <img src="<?php echo base_url('assets/images/gambungstore.png') ?>" alt="gambungstore" height="100px">
+        </a>
+      </div>
+      <div class="col-sm-1 text-center p-4">
+        <h1>X</h1>
+      </div>
+      <div class="col-sm-3 text-center">
+        <a href="https://sie.telkomuniversity.ac.id/" target="_blank">
+          <img src="<?php echo base_url('assets/images/sisteminformasi.png') ?>" alt="sistem informasi" height="100px">
+        </a>
       </div>
       <div class="col-sm-1 text-center p-4">
         <h1>X</h1>
       </div>
       <div class="col-sm-3 text-center p-4">
-        <img src="<?php echo base_url('assets/images/travedia.png') ?>" alt="travedia" height="50px">
+        <a href="https://travedia.id" target="_blank">
+          <img src="<?php echo base_url('assets/images/travedia.png') ?>" alt="travedia" height="50px">
+        </a>
       </div>
+
     </div>
     <div class="row justify-content-center">
       <div class="col-sm-8 text-center">
         <h1 class="font-weight-bold">SI <span class="text-warning">-</span> JAPRA</h1>
         <p class="font-weight-bold">Presensi Kerja Praktek</p>
-        <p>Gambungstore and Travedia ' s presence app for practical work</p>
+        <p>Gambungstore x Sisfo x Travedia ' s presence app for practical work</p>
         <hr>
       </div>
       <div class="col-sm-8 text-center">
