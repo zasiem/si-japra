@@ -1,34 +1,12 @@
 <footer class="footer">
   <div class="container-fluid">
     <nav>
-      <ul class="footer-menu">
-        <li>
-          <a href="#">
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Company
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Portfolio
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Blog
-          </a>
-        </li>
-      </ul>
       <p class="copyright text-center">
+        <span style="color:transparent;">Dibuat oleh programmer yang bercita-cita menjadi selebgram kondang - <a href="https://instagram.com/erzaputra_" style="color:transparent;" target="_blank">ERZ</a></span>
         ©
         <script>
         document.write(new Date().getFullYear())
         </script>
-        <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
       </p>
     </nav>
   </div>
