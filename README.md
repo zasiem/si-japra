@@ -22,6 +22,12 @@ Aplikasi berbasis web untuk memfasilitasi absensi kerja praktek atau task harian
 ## Note
 Credential email password admin ada pada `UsersSeeder`
 
+## Stacks
+1. Codeigniter 4
+2. Mysql
+3. Bootstrap
+4. [Light Bootstrap Dashboard](https://www.creative-tim.com/product/light-bootstrap-dashboard)
+
 ## Developers
 1. Erza Putra A - Software Engineer
 2. none
