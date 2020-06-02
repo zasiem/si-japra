@@ -43,6 +43,10 @@ $routes->get('/logout', 'AuthController::logout');
 $routes->get('/presence', 'PresenceController::index');
 $routes->post('/presence/input', 'PresenceController::presence');
 
+//admin
+$routes->get('/dashboard', 'HomeController::dashboardIndex');
+// $routes->get('/practical-works', 'PracticalWorkController::index');
+// $routes->get('/divisions', 'DivisionController::index');
 
 /**
  * --------------------------------------------------------------------
