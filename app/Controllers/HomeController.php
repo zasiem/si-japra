@@ -15,6 +15,9 @@ class HomeController extends BaseController
 
 	public function dashboardIndex()
 	{
+		if (session()->role != "admin") {
+			return redirect()->to('/');
+		}
 		return view('admins/home');
 	}
 
