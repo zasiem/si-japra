@@ -25,7 +25,7 @@ Tip 2: you can also add an image using data-image tag
         </a>
       </li>
       <li>
-        <a class="nav-link" href="/presences">
+        <a class="nav-link" href="/all-presences">
           <i class="nc-icon nc-notes"></i>
           <p>Presences</p>
         </a>
