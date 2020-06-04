@@ -9,8 +9,8 @@
     <div class="collapse navbar-collapse justify-content-end" id="navigation">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <p class="nav-link">
-            <span class="no-icon"><?php session('username') ?></span>
+          <p class="nav-link text-warning">
+            <span class="no-icon"><?= session()->name ?></span>
           </p>
         </li>
         <li class="nav-item">

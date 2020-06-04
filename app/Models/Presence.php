@@ -32,4 +32,14 @@ class Presence extends Model
     return $presences;
   }
 
+  public function getAllPresence()
+  {
+    $presences = $this->select('presences.*, practical_works.name as startup, divisions.name as division, users.name')
+    ->join('users', 'users.nim = presences.nim')
+    ->join('practical_works', 'users.practical_work_id = practical_works.id')
+    ->join('divisions', 'users.division_id = divisions.id')
+    ->findAll();
+    return $presences;
+  }
+
 }

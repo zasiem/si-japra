@@ -45,6 +45,7 @@ $routes->post('/presence/input', 'PresenceController::presence');
 
 //admin
 $routes->get('/dashboard', 'HomeController::dashboardIndex');
+$routes->get('/all-presences', 'PresenceController::all_presence');
 // $routes->get('/practical-works', 'PracticalWorkController::index');
 // $routes->get('/divisions', 'DivisionController::index');
 

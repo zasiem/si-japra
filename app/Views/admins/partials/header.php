@@ -10,3 +10,5 @@
 <link href="<?php echo base_url('assets/css/light-bootstrap-dashboard.css?v=2.0.0'); ?>" rel="stylesheet" />
 <!-- CSS Just for demo purpose, don't include it in your project -->
 <link href="<?php echo base_url('assets/css/demo.css'); ?>" rel="stylesheet" />
+<!-- datatable -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">

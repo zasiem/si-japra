@@ -52,4 +52,16 @@ class PresenceController extends BaseController
 
 	//--------------------------------------------------------------------
 
+	public function all_presence()
+	{
+		$nim = session()->get('role');
+		if ($nim != "admin") {
+			return redirect()->to('/');
+		}
+
+		$Presence = new Presence();
+		$data['presences'] = $Presence->getAllPresence();
+		return view('admins/all-presence', $data);
+	}
+
 }
