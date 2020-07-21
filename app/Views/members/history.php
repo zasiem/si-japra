@@ -30,3 +30,8 @@
     </table>
   </div>
 </div>
+<div class="row justify-content-center my-3">
+  <div class="col-12">
+    <a href="/export" class="btn btn-warning w-25 text-white" target="_Blank">Export</a>
+  </div>
+</div>

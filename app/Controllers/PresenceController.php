@@ -68,6 +68,10 @@ class PresenceController extends BaseController
 	public function export()
 	{
 		$nim = session()->get('nim');
+		if(empty($nim))
+		{
+			return redirect()->to('/');
+		}
 
 		$Presence = new Presence();
 		$data['presences'] = $Presence->where('nim', $nim)->where('is_late',0)->findAll();
