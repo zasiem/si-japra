@@ -3,6 +3,7 @@
 use CodeIgniter\I18n\Time;
 
 use App\Models\Presence;
+use App\Models\User;
 
 class PresenceController extends BaseController
 {
@@ -62,6 +63,23 @@ class PresenceController extends BaseController
 		$Presence = new Presence();
 		$data['presences'] = $Presence->getAllPresence();
 		return view('admins/all-presence', $data);
+	}
+
+	public function export()
+	{
+		$nim = session()->get('nim');
+
+		$Presence = new Presence();
+		$data['presences'] = $Presence->where('nim', $nim)->where('is_late',0)->findAll();
+
+		$User = new User();
+		$data['user'] = $User->select('practical_works.name as startup, divisions.name as division, users.name')
+		->where('nim', $nim)
+		->join('practical_works', 'users.practical_work_id = practical_works.id')
+		->join('divisions', 'users.division_id = divisions.id')
+		->findAll();
+
+		return view('members/export', $data);
 	}
 
 }

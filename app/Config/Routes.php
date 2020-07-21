@@ -42,6 +42,7 @@ $routes->get('/logout', 'AuthController::logout');
 // presence
 $routes->get('/presence', 'PresenceController::index');
 $routes->post('/presence/input', 'PresenceController::presence');
+$routes->get('/export', 'PresenceController::export');
 
 //admin
 $routes->get('/dashboard', 'HomeController::dashboardIndex');
