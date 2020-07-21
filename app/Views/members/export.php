@@ -53,7 +53,7 @@
             </div>
         </div>
         <div class="row justify-content-center py-3">
-            <div class="col-10 text-center">
+            <div class="col-9 text-center">
                 <div class="table table-bordered">
                     <table>
                         <thead>
@@ -72,11 +72,11 @@
                                 if($counter < count($presences)-1){
                             ?>
                                 <tr>
-                                    <th><?= $presences[$j]['created_at'] ?></th>
-                                    <th><?= $presences[$j]['created_at'] ?></th>
-                                    <th>16.30 WIB</th>
-                                    <th><?= $presences[$j+1]['dones'] ?></th>
-                                    <th>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, consequatur cum similique ea nemo sed dolorem sit omnis quas aut repudiandae saepe odio quisquam. Sit error ipsam dolorum. Omnis, fuga?</th>
+                                    <td><?= date("d-m-Y",strtotime($presences[$j]['created_at'])); ?></td>
+                                    <td><?= date("H.i",strtotime($presences[$j]['created_at'])); ?> WIB</td>
+                                    <td>16.30 WIB</td>
+                                    <td><?= $presences[$j+1]['dones'] ?></td>
+                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, consequatur cum similique ea nemo sed dolorem sit omnis quas aut repudiandae saepe odio quisquam. Sit error ipsam dolorum. Omnis, fuga?</th>
                                 </tr>
                             <?php
                                 }
