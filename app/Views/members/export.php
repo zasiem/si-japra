@@ -76,7 +76,9 @@
                                     <td><?= date("H.i",strtotime($presences[$j]['created_at'])); ?> WIB</td>
                                     <td>16.30 WIB</td>
                                     <td><?= $presences[$j+1]['dones'] ?></td>
-                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, consequatur cum similique ea nemo sed dolorem sit omnis quas aut repudiandae saepe odio quisquam. Sit error ipsam dolorum. Omnis, fuga?</th>
+                                    <td>
+                                        <img src="<?php echo base_url('assets/images/paraf.png') ?>" alt="paraf" height="80px">
+                                    </td>
                                 </tr>
                             <?php
                                 }
