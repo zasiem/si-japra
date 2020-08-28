@@ -22,4 +22,26 @@
     </div>
   </div>
 </nav>
+
+<div class="col-sm-12 text-center mt-5">
+  <?php if (session()->getFlashdata('success')) : ?>
+    <div class="alert alert-success" role="alert">
+      <?php echo session()->getFlashdata('success'); ?>
+    </div>
+  <?php endif; ?>
+  <?php if (session()->getFlashdata('errors')) : ?>
+    <div class="alert alert-danger" role="alert">
+      <?php foreach (session()->getFlashdata('errors') as $field => $error) : ?>
+        <p><?= $error ?></p>
+      <?php endforeach ?>
+    </div>
+  <?php endif; ?>
+  <?php if (!empty($errors)) : ?>
+    <div class="alert alert-danger">
+      <?php foreach ($errors as $field => $error) : ?>
+        <p><?= $error ?></p>
+      <?php endforeach ?>
+    </div>
+  <?php endif ?>
+</div>
 <!-- End Navbar -->

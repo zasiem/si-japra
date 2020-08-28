@@ -42,4 +42,16 @@ class PracticalWorkController extends BaseController
 		session()->setFlashdata('success', 'Berhasil Menginput Practical Works!');
 		return redirect()->to("/practical-works/create");
 	}
+
+	public function delete()
+	{
+		$id = $this->request->getPost('id');
+		$PracticalWork = new PracticalWork();
+		if (!$PracticalWork->delete(['id' => $id])) {
+			session()->setFlashdata('errors', $PracticalWork->errors());
+			return redirect()->to("/practical-works");
+		}
+		session()->setFlashdata('success', 'Berhasil Menghapus Practical Works!');
+		return redirect()->to("/practical-works");
+	}
 }

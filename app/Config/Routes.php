@@ -50,6 +50,7 @@ $routes->get('/all-presences', 'PresenceController::all_presence');
 $routes->get('/practical-works', 'PracticalWorkController::index');
 $routes->get('/practical-works/create', 'PracticalWorkController::create');
 $routes->post('/practical-works/store', 'PracticalWorkController::store');
+$routes->post('/practical-works/delete', 'PracticalWorkController::delete');
 $routes->get('/divisions', 'DivisionController::index');
 
 /**

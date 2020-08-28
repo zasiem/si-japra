@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <?php echo view('admins/partials/header') ?>
 </head>
+
 <body>
   <div class="wrapper">
     <?php echo view('admins/partials/sidebar') ?>
@@ -19,15 +21,22 @@
                     <th>No</th>
                     <th>Nama Startup</th>
                     <th>Image</th>
+                    <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <?php foreach($practical_works as $index => $practical_work) : ?>
+                  <?php foreach ($practical_works as $index => $practical_work) : ?>
                     <tr>
-                      <td><?= $index+1 ?></td>
+                      <td><?= $index + 1 ?></td>
                       <td><?= $practical_work['name'] ?></td>
                       <td>
-                        <img src="<?= base_url('assets/uploads/'.$practical_work['image'])?>" alt="" height="200px">
+                        <img src="<?= base_url('assets/uploads/' . $practical_work['image']) ?>" alt="" height="200px">
+                      </td>
+                      <td>
+                        <form action="/practical-works/delete" method="post">
+                          <input name="id" type="text" value="<?= $practical_work['id'] ?>" hidden>
+                          <button class="btn btn-danger" type="submit">Delete</button>
+                        </form>
                       </td>
                     </tr>
                   <?php endforeach ?>
@@ -41,4 +50,5 @@
     </div>
   </div>
 </body>
+
 </html>
