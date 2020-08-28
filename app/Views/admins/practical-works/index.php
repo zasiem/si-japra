@@ -26,7 +26,9 @@
                     <tr>
                       <td><?= $index+1 ?></td>
                       <td><?= $practical_work['name'] ?></td>
-                      <td><?= $practical_work['image'] ?></td>
+                      <td>
+                        <img src="<?= base_url('assets/uploads/'.$practical_work['image'])?>" alt="" height="200px">
+                      </td>
                     </tr>
                   <?php endforeach ?>
                 </tbody>

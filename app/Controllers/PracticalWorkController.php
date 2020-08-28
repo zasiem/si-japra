@@ -1,4 +1,6 @@
-<?php namespace App\Controllers;
+<?php
+
+namespace App\Controllers;
 
 use CodeIgniter\I18n\Time;
 
@@ -22,11 +24,13 @@ class PracticalWorkController extends BaseController
 
 	public function store()
 	{
-		$path = $this->request->getFile('image')->store('practical_works/');
+		$file = $this->request->getFile('image');
+		$fileName = $file->getRandomName();
+		$file->move(ROOTPATH . 'public/assets/uploads/', $fileName);
 		$name = $this->request->getPost('name');
 
 		$data = [
-			'image' => $path,
+			'image' => $fileName,
 			'name' => $name,
 		];
 
@@ -37,7 +41,5 @@ class PracticalWorkController extends BaseController
 		}
 		session()->setFlashdata('success', 'Berhasil Menginput Practical Works!');
 		return redirect()->to("/practical-works/create");
-
 	}
-
 }
