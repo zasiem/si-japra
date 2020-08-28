@@ -12,7 +12,7 @@ class AuthController extends BaseController
 			if (session()->id != null) {
 				return redirect()->to('/');
 			}
-			return view('login');
+			return view('login', ['practical_works' => $this->getStartup()]);
 	}
 
 	public function login_process()
@@ -23,7 +23,8 @@ class AuthController extends BaseController
 		$User = new User();
 		$user = $User->where("nim", $nim)->first();
 		if (!$user) {
-			return view('login', ['errors' => ['NIM' => 'NIM tidak ditemukan']]);
+			session()->setFlashdata('errors', ['NIM' => 'NIM tidak ditemukan']);
+			return redirect()->to('/login');
 		}
 
 		if ($user['password'] != md5($password)) {
@@ -50,6 +51,7 @@ class AuthController extends BaseController
 		$Division = new Division();
 		$data["practicalworks"] = $PracticalWork->findAll();
 		$data["divisions"] = $Division->findAll();
+		$data['practical_works'] = $this->getStartup();
 		return view('register', $data);
 	}
 

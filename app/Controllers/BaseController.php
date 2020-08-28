@@ -14,6 +14,7 @@ namespace App\Controllers;
  * @package CodeIgniter
  */
 
+use App\Models\PracticalWork;
 use CodeIgniter\Controller;
 
 class BaseController extends Controller
@@ -41,6 +42,13 @@ class BaseController extends Controller
 		//--------------------------------------------------------------------
 		// E.g.:
 		// $this->session = \Config\Services::session();
+	}
+
+	public function getStartup()
+	{
+		$PracticalWork = new PracticalWork();
+		$practical_works = $PracticalWork->findAll();
+		return $practical_works;
 	}
 
 }

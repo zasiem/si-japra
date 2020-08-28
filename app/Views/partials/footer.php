@@ -10,10 +10,14 @@
   <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js" ></script>
   <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
 
+  <!-- owl carousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
   <script type="text/javascript">
   $(document).ready(function() {
     $('#datatable').DataTable();
-  } );
+    $(".owl-carousel").owlCarousel();
+  });
   </script>
 
 </body>

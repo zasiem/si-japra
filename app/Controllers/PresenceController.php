@@ -19,6 +19,7 @@ class PresenceController extends BaseController
 		$Presence = new Presence();
 		$data['presences'] = $Presence->getPresences(session()->get('nim'));
 		$data['time'] = Time::now('Asia/Jakarta');
+		$data['practical_works'] = $this->getStartup();
 		return view('members/home', $data);
 
 	}
