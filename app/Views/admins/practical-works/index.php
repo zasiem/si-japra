@@ -20,6 +20,7 @@
                   <tr>
                     <th>No</th>
                     <th>Nama Startup</th>
+                    <th>Url</th>
                     <th>Image</th>
                     <th>Action</th>
                   </tr>
@@ -29,6 +30,7 @@
                     <tr>
                       <td><?= $index + 1 ?></td>
                       <td><?= $practical_work['name'] ?></td>
+                      <td><?= $practical_work['url'] ?></td>
                       <td>
                         <img src="<?= base_url('assets/uploads/' . $practical_work['image']) ?>" alt="" height="200px">
                       </td>

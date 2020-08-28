@@ -11,11 +11,13 @@ class PracticalWork extends Model
   protected $allowedFields = [
     "name",
     "image",
+    'url',
   ];
 
   protected $validationRules    = [
     "name" => "required",
     "image" => "required",
+    'url' => "required",
   ];
 
 }

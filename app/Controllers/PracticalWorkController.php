@@ -28,10 +28,12 @@ class PracticalWorkController extends BaseController
 		$fileName = $file->getRandomName();
 		$file->move(ROOTPATH . 'public/assets/uploads/', $fileName);
 		$name = $this->request->getPost('name');
+		$url = $this->request->getPost('url');
 
 		$data = [
 			'image' => $fileName,
 			'name' => $name,
+			'url' => $url,
 		];
 
 		$PracticalWork = new PracticalWork();

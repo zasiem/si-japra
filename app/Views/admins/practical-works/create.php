@@ -20,6 +20,12 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label for="url" class="col-md-12 col-form-label text-md-left">Url</label>
+                            <div class="col-md-12">
+                                <input id="url" type="text" class="form-control " name="url" value="" required autocomplete="url">
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <label for="image" class="col-md-12 col-form-label text-md-left">Image</label>
                             <div class="col-md-12">
                                 <input id="image" type="file" name="image" value="" required autocomplete="image">
