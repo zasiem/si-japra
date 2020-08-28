@@ -47,8 +47,10 @@ $routes->get('/export', 'PresenceController::export');
 //admin
 $routes->get('/dashboard', 'HomeController::dashboardIndex');
 $routes->get('/all-presences', 'PresenceController::all_presence');
-// $routes->get('/practical-works', 'PracticalWorkController::index');
-// $routes->get('/divisions', 'DivisionController::index');
+$routes->get('/practical-works', 'PracticalWorkController::index');
+$routes->get('/practical-works/create', 'PracticalWorkController::create');
+$routes->post('/practical-works/store', 'PracticalWorkController::store');
+$routes->get('/divisions', 'DivisionController::index');
 
 /**
  * --------------------------------------------------------------------
