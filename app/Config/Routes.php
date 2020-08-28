@@ -52,6 +52,9 @@ $routes->get('/practical-works/create', 'PracticalWorkController::create');
 $routes->post('/practical-works/store', 'PracticalWorkController::store');
 $routes->post('/practical-works/delete', 'PracticalWorkController::delete');
 $routes->get('/divisions', 'DivisionController::index');
+$routes->get('/divisions/create', 'DivisionController::create');
+$routes->post('/divisions/store', 'DivisionController::store');
+$routes->post('/divisions/delete', 'DivisionController::delete');
 
 /**
  * --------------------------------------------------------------------
